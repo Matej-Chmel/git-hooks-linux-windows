@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Called by "git commit" with no arguments.
+# Python should be on path.
+# If 'py' doesn't work, you can try 'python' or 'python3' instead.
+
+# Working directory for hook scripts is the root directory of the repository.
+
+echo pre-commit called
+echo CWD:
+echo $PWD
+
+py -m hooks.update_version
+
+# Files that are modified during execution of this script,
+# have to be added again.
+
+git add data/version.pydef
+
+exit $?
