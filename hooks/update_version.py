@@ -18,7 +18,7 @@ request = get(URL, headers={'Authorization': f'token {token}'})
 
 if request.status_code == codes.ok: #pylint: disable=no-member
     print('Reading latest version from github.')
-    version = int(request.json()['content'])
+    version = int(b64decode(request.json()['content']))
 else:
     print('Repository or file not found. Reading latest version from local file.')
     version = VERSION

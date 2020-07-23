@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# This hook is great for modifying commit message.
+# This shell script is called by 'git commit' with 2 arguments:
+#	- path to file with the message
+#	- description of message's source
+
+# Let's introduce this script to the console.
+echo prepare-commit-msg called
+
+# Display arguments for debugging.
+# Argument 0 is path to this script.
+echo $1
+echo $2
+
+# This hook is called after the 'pre-commit' hook so at this point
+# all files will be saved in their final form.
+
+# Ok. Now let's call our scripts that will do the job.
+# Don't forget to pass the path to commit message.
+py -m hooks.format_message $1
