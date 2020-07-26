@@ -30,6 +30,14 @@ except ImportError:
     print('Module requests not found. Reading latest version from local file.')
     version = VERSION
 
+except OSError:
+    print(
+        'Token not found.\n'
+        'Private repositories cannot be viewed without a token.\n'
+        'Reading latest version from local file.'
+    )
+    version = VERSION
+
 print(f'Latest version was {version}.')
 version += 1
 
