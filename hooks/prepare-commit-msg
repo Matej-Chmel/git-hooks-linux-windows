@@ -14,7 +14,7 @@ echo $1
 echo $2
 
 # This hook is called after the 'pre-commit' hook so at this point
-# all files will be saved in their final form.
+# all files are already saved in their final form.
 
 # Ok. Now let's call our scripts that will do the job.
 # Don't forget to pass the path to commit message.

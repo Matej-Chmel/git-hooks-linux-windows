@@ -1,26 +1,33 @@
 # pylint: disable=import-error
-from base64 import b64decode
-from requests import get, codes
 from src.common import data, VERSION
 
-token = None
 version = None
 
-with data('.token') as file:
-    token = file.read()
+try:
+    from base64 import b64decode
+    from requests import get, codes
 
-URL = (
-    'https://api.github.com/repos/Matej-Chmel/'
-    'git-hooks-linux-windows/contents/data/version.pydef'
-)
+    token = None
 
-request = get(URL, headers={'Authorization': f'token {token}'})
+    with data('.token') as file:
+        token = file.read()
 
-if request.status_code == codes.ok: #pylint: disable=no-member
-    print('Reading latest version from github.')
-    version = int(b64decode(request.json()['content']))
-else:
-    print('Repository or file not found. Reading latest version from local file.')
+    URL = (
+        'https://api.github.com/repos/Matej-Chmel/'
+        'git-hooks-linux-windows/contents/data/version.pydef'
+    )
+
+    request = get(URL, headers={'Authorization': f'token {token}'})
+
+    if request.status_code == codes.ok: #pylint: disable=no-member
+        print('Reading latest version from github.')
+        version = int(b64decode(request.json()['content']))
+    else:
+        print('Repository or file not found. Reading latest version from local file.')
+        version = VERSION
+
+except ImportError:
+    print('Module requests not found. Reading latest version from local file.')
     version = VERSION
 
 print(f'Latest version was {version}.')

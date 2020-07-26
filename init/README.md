@@ -3,6 +3,7 @@ Based on your OS and environment choose one script in this directory and run it.
 
 ## What does the script do?
 - The script tells git to look for hooks in the [hooks](../hooks/) directory.
+- On Linux it grants execute permission to all the shell scripts in [hooks](../hooks/) directory.
 
 ## What do I need to run it?
 It's highly probable that you can already run at least one of the scripts without installing anything extra. For example, on Windows I bet you can run Batch files.
@@ -25,9 +26,9 @@ It does not matter from where you run the script. If it's not moved, it should f
 ```
 
 ### Linux
-#### Shell script
+#### Bash
 ```none
-$ sh init/init.sh
+$ bash init/init.sh
 ```
 
 #### Python
