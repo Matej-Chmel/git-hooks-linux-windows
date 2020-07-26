@@ -33,7 +33,7 @@ cd hooks
 # Grant x permission to each file without extension.
 for file in *; do
     case $file in *.*) continue;; esac
-    chmod +x file
+    chmod +x $file
     echo Permission granted to $file.
 done
 
