@@ -20,7 +20,7 @@ It does not matter from where you run the script. If it's not moved, it should f
 > init\init.bat
 ```
 
-#### Python
+#### Python launcher
 ```none
 > py init/init.py
 ```
@@ -33,5 +33,5 @@ $ bash init/init.sh
 
 #### Python
 ```none
-$ py init/init.py
+$ python init/init.py
 ```

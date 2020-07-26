@@ -18,4 +18,7 @@ echo $2
 
 # Ok. Now let's call our scripts that will do the job.
 # Don't forget to pass the path to commit message.
+
+# Some environments prefer python others py. Run the first one that works.
+python -m hooks.format_message $1 ||
 py -m hooks.format_message $1

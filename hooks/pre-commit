@@ -15,6 +15,9 @@ echo $PWD
 # I've choosen Python but you can run any program at this moment.
 
 # This script will increment version number stored in github by 1.
+
+# Some environments prefer python others py. Run the first one that works.
+python -m hooks.update_version ||
 py -m hooks.update_version
 
 # Files that are modified during execution of this script, have to be added again.
