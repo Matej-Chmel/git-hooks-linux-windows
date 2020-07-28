@@ -4,7 +4,7 @@
 cd $(dirname "$(readlink -f "$0")")/..
 
 # Remove latest unpushed commit.
-git reset --soft HEAD
+git reset --soft HEAD~1
 
 # Remove staged changes.
 git reset HEAD -- .

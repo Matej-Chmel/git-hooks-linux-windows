@@ -4,7 +4,7 @@ set script_dir=%script_dir:~0, -1%
 cd %script_dir%\..
 
 rem Remove latest unpushed commit.
-git reset --soft HEAD
+git reset --soft HEAD~1
 
 rem Remove staged changes.
 git reset HEAD -- .
