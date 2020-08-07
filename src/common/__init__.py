@@ -1,1 +1,1 @@
-from .this import DATA_DIR, REPO_DIR, VERSION, confirm, data
+from .this import data, DATA_DIR, REPO_DIR, version

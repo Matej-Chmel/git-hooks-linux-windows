@@ -16,22 +16,22 @@ It does not matter from where you run the script. If it's not moved, it should f
 
 ### Windows
 #### Batch
-```none
-> init\init.bat
+```
+init\init.bat
 ```
 
 #### Python launcher
-```none
-> py init/init.py
+```
+py init/init.py
 ```
 
 ### Linux
 #### Bash
-```none
-$ bash init/init.sh
+```
+bash init/init.sh
 ```
 
 #### Python
-```none
-$ python init/init.py
+```
+python init/init.py
 ```

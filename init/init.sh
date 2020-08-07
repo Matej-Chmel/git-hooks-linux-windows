@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Run this script right after cloning the repository.
+# Run this script right after forking the repository.
 # Suitable for Linux.
 
 # Introduce this script.

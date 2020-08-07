@@ -1,4 +1,4 @@
-# Run this script right after cloning the repository.
+# Run this script right after forking the repository.
 # Suitable for any OS with Python installed.
 
 # This could be done using the git module. But why bother installing it.

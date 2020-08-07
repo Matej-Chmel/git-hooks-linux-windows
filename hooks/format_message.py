@@ -1,7 +1,7 @@
 #pylint: disable=import-error
 import re
 from sys import argv
-from src.common import VERSION
+from src.common import version
 
 message = None
 
@@ -13,7 +13,7 @@ with open(argv[1], 'r') as file:
 if re.match(r'^Version\s\d+\.\s[^\s]((.|\n)*)$', message) is None:
     # Message is not formatted correctly.
     # Let's prepend version string to the message.
-    message = f'Version {VERSION}. {message}'
+    message = f'Version {version()}. {message}'
     print(f"Formatted message to '{message}'")
 else:
     print('Message was formatted fine.')
