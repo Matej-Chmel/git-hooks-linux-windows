@@ -2,7 +2,7 @@ rem Run this script right after forking the repository.
 rem Suitable for Windows.
 
 rem Introduce this script.
-echo init.sh called
+echo init.bat called
 
 rem Figure out this script's directory.
 set script_dir=%~dp0
